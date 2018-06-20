@@ -1,0 +1,9 @@
+Options All -Indexes
+RewriteEngine On
+RewriteRule ^anasayfa$ index.php [L,NC]
+RewriteRule ^iletisim$ index.php?iletisim [L,NC]
+RewriteRule ^soru-cevap$ index.php?soru_cevap [L,NC]
+RewriteRule ^(.*)/(.*)/(.*)/([0-9]+)/([0-9]+)/([0-9]+)$ index.php?dersler=$4&notlar=$5&fak=$1&bol=$2&baslik=$3&not=$6 [L,NC]
+RewriteRule ^(.*)/(.*)/(.*)/([0-9]+)/([0-9]+)$ index.php?dersler=$4&dersfakulte=$1&bolum=$2&ders=$3&notlar=$5 [L,NC]
+RewriteRule ^(.*)/(.*)/([0-9]+)/([0-9]+)$ index.php?dersler=$3&fakulte=$2&bolum_adi=$1&s=$4 [L,NC]
+
